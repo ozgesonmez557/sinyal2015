@@ -1,16 +1,17 @@
 function ff=frek (nota,oktav)
-notalar=['C','c','D','E','e','F','f','G','g','A','b','B']; %notaları notalar a atadım
-referans=16.35; % işlem yaparken referansımı olarak belirledim
-p=length(notalar); %notaların uzunluğu kadar olan p yi oluşturdum
+notalar=['C','c','D','E','e','F','f','G','g','A','b','B']; %notalarÄ± notalar a atadÄ±m
+% C=C(Do) c=C# D=D(Re) E=Eb e=E(Mi) F=F(Fa) f=F# G=G(Sol) g=G# A=A(La) b=Bb B=B(Si) ÅŸeklinde isimlendirdim.
+referans=16.35; % iÅŸlem yaparken referansÄ±mÄ± olarak belirledim
+p=length(notalar); %notalarÄ±n uzunluÄŸu kadar olan p yi oluÅŸturdum
 
 
-for okt=0:8 %okt değeri 0 dan 8 e kadar 1 er arttırarak 0 dan 8 e kadar oktavları oluşturdum
-    if okt==oktav %oktav değerini okt değerine atadım
+for okt=0:8 %okt deÄŸeri 0 dan 8 e kadar 1 er arttÄ±rarak 0 dan 8 e kadar oktavlarÄ± oluÅŸturdum
+    if okt==oktav %oktav deÄŸerini okt deÄŸerine atadÄ±m
         
-        for j=1:p%j yi 1 den başlatıp p yani notaların uzunluğu kadar devam ettir
-            if nota==char (notalar(j))%notaların karakter değerini nota ya atadım
+        for j=1:p%j yi 1 den baÅŸlatÄ±p p yani notalarÄ±n uzunluÄŸu kadar devam ettir
+            if nota==char (notalar(j))%notalarÄ±n karakter deÄŸerini nota ya atadÄ±m
                 
-                ff=2^okt*(2^((j-1)/12)*referans);%referans ı esas alarak frekans değerlerini hesaplattım
+                ff=2^okt*(2^((j-1)/12)*referans);%referans Ä± esas alarak frekans deÄŸerlerini hesaplattÄ±m
             end
         end
     end
