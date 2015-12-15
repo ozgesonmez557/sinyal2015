@@ -1,5 +1,5 @@
 function ff=frek (nota,oktav)
-notalar=['A' 'a' 'B' 'b' 'C' 'c' 'D' 'd' 'E' 'e' 'F' 'f']; %notalarý notalar a atadým
+notalar=['C','c','D','E','e','F','f','G','g','A','b','B']; %notalarý notalar a atadým
 referans=16.35; % iþlem yaparken referansýmý olarak belirledim
 p=length(notalar); %notalarýn uzunluðu kadar olan p yi oluþturdum
 
