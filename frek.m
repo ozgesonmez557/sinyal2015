@@ -15,9 +15,9 @@ for i=0:8 %okt değeri 0 dan 8 e kadar 1 er arttırarak 0 dan 8 e kadar oktavlar
             if size(nota)==size(notalar{j})%notaların karakter değerini nota ya atadım
                 if nota==notalar{j}%giriş yaptığım nota,notalar dizisindeki j. elemana eşitse if'in içine gir.
                 ff=2^i*(2^((j-1)/12)*referans);%referans ı esas alarak frekans değerlerini hesaplattım
-                if size(nota)==size(notalar{13})
-                if nota==notalar{13}
-                    ff=0;
+                if size(nota)==size(notalar{13})%giriş yaptığım notanın boyutu ile notalar dizininde ki 13. elemanın boyutu eşit olsun.
+                if nota==notalar{13}%giriş yaptığım nota notalar dizininde ki 13. eleman olan sus olsun.
+                    ff=0;%frekans değeri susf yani 0 olsun.
                 end
             end
         end
