@@ -11,4 +11,4 @@ Bu dosyalarda frekans değerlerini ve sin sinyalini hesaplayan kodlar yazıldı.
 README dosyası düzenlendi.
 
 HAFTA 3:
-frek.m dosyasına sus değeri hesaplatıldı.Notaların isimleri farklı boyutlu olarak yazıldı ve boyut sorunu çözüldü.
+frek.m dosyasına sus değeri hesaplatıldı.Notaların isimleri farklı boyutlu olarak yazıldı ve boyut sorunu çözüldü.Ayrıca oktav değerini vermediğimde oktavı 4 almasını sağladım.
