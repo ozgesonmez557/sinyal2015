@@ -1,4 +1,9 @@
-function [x , t] = note (f,dur);%frekansÄ± ve t aralÄ±ÄŸÄ±nÄ±n nerede duracaÄŸÄ±nÄ± belirttim
-t=0:1/(f*100):dur;%t aralÄ±ÄŸÄ±nÄ± tanÄ±mladÄ±m
-x = sin (2*pi*f*t);%sin sinyalini tanÄ±mlayÄ±p x e atadÄ±m
+function [xx,tt]=note(frekans,vurus) 
+Fs=8192; %frekans örneklem değerimi tanımladım.
+tt=0:1/Fs:((0.25-(1/Fs))/2);  %zaman aralığını belirledim.
+zz=0;
+   xx=sin(2*pi*frekans*tt);%sinüs sinyalini tanımladım. 
+if length(xx)==length(zz)    %xx ile zz'nin boyutu aynı ise
+       zz=[linspace(0,1.5,Fs*vurus*(2/8)),linspace(1.5,1,Fs*vurus*(1/8)),linspace(1,1,Fs*vurus*(4/8)),linspace(1,0,Fs*vurus*(1/8))];%zz'yi döndür.
+end
 end
