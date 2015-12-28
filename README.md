@@ -17,6 +17,6 @@ README dosyası düzenlendi.
 HAFTA 4:
 note.m dosyası düzenlendi.Burada notanın harmonikleri sinyale eklendi.
 sentez.m dosyası düzenlendi.Burada sentez.m içinde notalar.txt dosyasını satır satır okuyan program geliştirildi.
-Sabit bir örnekleme frekansı eklendi.(Fs)
+Sabit bir örnekleme frekansı eklendi(Fs).
 Duraklama süresi belirlendi.
 README dosyası düzenlendi.
