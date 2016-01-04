@@ -20,3 +20,8 @@ sentez.m dosyası düzenlendi.Burada sentez.m içinde notalar.txt dosyasını sa
 Sabit bir örnekleme frekansı eklendi(Fs).
 Duraklama süresi belirlendi.
 README dosyası düzenlendi.
+
+HAFTA 5:
+frek.m,note.m,sentez.m ve README dosyalarında değişiklik yapıldı.
+sentez.m dosyasında notalar, notalar.txt dosyasından çekilip sinüs sinyali oluşturuldu.Bu sinüs sinyali ile ses çıkışı sağlandı.
+Böylelikle notalarımızdan ses oluşturuldu.
