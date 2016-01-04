@@ -1,28 +1,26 @@
-function ff=frek (nota,oktav) %nota ve oktav değerlerini alacak
-notalar={'Do','Dod','Re','Mib','Mi','Fa','Fad','Sol','Sold','La','Sib','Si','sus'}; %notaları notalar a atadım
-
-referans=16.35; % işlem yaparken referansımı olarak belirledim
-k=length(notalar); %notaların uzunluğu kadar olan k yı oluşturdum
-susf=0;
-if nargin<2
-     oktav=4;
+function ff=frek(nota,oktav) %girilen nota ve oktav degerine gore frekansi hesaplayan fonksiyon tanimi
+notalar={'Do','Dod','Re','Red','Mi','Fa','Fad','Sol','Sold','La','Lad','Si','sus'};%Lad=La#,Sib;Dod=Do#,Reb;Red=Re#,Mib;Fad=Fa#,Solb;Sold=Sol#,Lab
+referans=16.35;    %formul icin ilk deger atamasi
+p=length(notalar); %notalar dizisinin eleman sayisi 
+if nargin<2        %girilen arguman sayısının 2'den az olma durumu
+    oktav=4;
 end
-
-for i=0:8 %okt değeri 0 dan 8 e kadar 1 er arttırarak 0 dan 8 e kadar oktavları oluşturdum
-    if i==oktav %i nin değeri oktavın değerine eşitse if'in içine gir
-        
-        for j=1:k%j yi 1 den başlatıp k yani notaların uzunluğu kadar devam ettir
-            if size(nota)==size(notalar{j})%notaların karakter değerini nota ya atadım
-                if nota==notalar{j}%giriş yaptığım nota,notalar dizisindeki j. elemana eşitse if'in içine gir.
-                ff=2^i*(2^((j-1)/12)*referans);%referans ı esas alarak frekans değerlerini hesaplattım
-                if size(nota)==size(notalar{13})%giriş yaptığım notanın boyutu ile notalar dizininde ki 13. elemanın boyutu eşit olsun.
-                if nota==notalar{13}%giriş yaptığım nota notalar dizininde ki 13. eleman olan sus olsun.
-                    ff=0;%frekans değeri susf yani 0 olsun.
+for okt=0:8        %okt(oktav) degerini 0'dan 8(dahil)'e kadar artirma islemi
+    if okt==oktav  %girilen oktav degerinin okt degeriyle esitlenmesi halinde
+        for j=1:p  %++dizi eleman indisinin artırımı
+            if size(nota)==size(notalar{j}) 
+                if nota==notalar{j}          
+                    ff=2^okt*(2^((j-1)/12)*referans); 
                 end
             end
+            if size(nota)==size(notalar{j}) %girilen ile dizideki notalarin uzunluklari esit ise
+                if nota==notalar{j}         %++girilen notanin dizideki karsiliginin(indisinin) bulunmasi 
+                    ff=2^okt*(2^((j-1)/12)*referans); %oktav ve nota indisine bagli olarak
+                                                      %++frekansi hesaplayan formul
+                end                                   
+            end 
         end
     end
 end
 end
-end
-end
+
