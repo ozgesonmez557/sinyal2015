@@ -1,1 +1,1 @@
-ff=frek('Fa',3)
+ff=frek('fa',3)
